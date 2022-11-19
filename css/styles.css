@@ -591,15 +591,18 @@ margin-left: 50px;
     align-items: center;
     width: 358px; 
     padding-top: 15px;
-    padding-right: 295px;
     padding-bottom: 15px; 
     padding-left: 16px; 
 
     border: 1px solid rgba(255, 255, 255, 0.3);
     filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
     border-radius: 4px;
+    outline: 1px solid transparent;
+    outline-offset: -1px;
 
-    background: #2F303A;
+    background: transparent;
+
+    transition: outline-color var(--animation), border var(--animation);
 }
 
 .form-field .input::placeholder {
@@ -608,6 +611,12 @@ margin-left: 50px;
     letter-spacing: 0.03em;
 
     color: rgba(255, 255, 255, 0.6);
+}
+
+.form-field .input:hover,
+.form-field .input:focus {
+    border: 1px solid var(--text-accent);
+    outline-color: var(--text-accent);
 }
 
 .send-button {
@@ -631,23 +640,26 @@ margin-left: 50px;
 
     color: var(--secondary-color);
     background: var(--text-accent);
+
+    transition: background-color var(--animation);
 }
 
 .send-button .link {
     position: absolute;
     padding-top: 3px;
     margin-left: 10px;
-  
-    /* padding-top: 13px;
-    padding-bottom: 13px;
-    padding-left: 10px;
-    padding-right: 28px; */
 }
-
+  
 .send-button .icon {
     fill: #FFFFFF;
 }
 
+
+.send-button:hover,
+.send-button:focus {
+    background-color: #188CE8;
+    color: var(--secondary-color);
+}
 
 /* Portfolio */
 
@@ -874,14 +886,13 @@ fill: var(--text-accent)
 }
 
 .modal-form-wrapper {
-    position: relative;
-    margin-top: 4px;
+    margin-bottom: 10px;
 }
 
 .modal-form-field {
-    margin-bottom: 10px;
     width: 100%;
-    height: 40px;
+    padding-top: 11px;
+    padding-bottom: 11px;
     padding-left: 40px;
     padding-right: 40px;
     border: 1px solid rgba(33, 33, 33, 0.2);
@@ -892,22 +903,24 @@ fill: var(--text-accent)
     transition: outline-color var(--animation), border var(--animation) ;
 }
 
+.modal-form-field:hover,
 .modal-form-field:focus {
     border: 1px solid var(--text-accent);
     outline-color: var(--text-accent);
 } 
 
 .modal-form-icon {
-    position: absolute;
+    /* position: absolute;
     top: 0;
+    left:0;
     transform: translateY(50%);
-    left: 12px;
-
+     */
     fill: var(--title-text-color);
 
     transition: fill var(--animation);
 }
 
+.modal-form-field:hover + .modal-form-icon,
 .modal-form-field:focus + .modal-form-icon{
     fill: var(--text-accent);
 }
@@ -935,6 +948,7 @@ fill: var(--text-accent)
     transition: outline-color var(--animation), border var(--animation);
 }
 
+.modal-form-message:hover,
 .modal-form-message:focus {
     border: 1px solid var(--text-accent);
     outline-color: var(--text-accent);
