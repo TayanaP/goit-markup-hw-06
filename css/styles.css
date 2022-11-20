@@ -919,6 +919,8 @@ fill: var(--text-accent)
 
 .modal-form-icon {
     position: absolute;
+    left: 12px;
+    top: 50%;
     fill: var(--title-text-color);
 
     transition: fill var(--animation);
