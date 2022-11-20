@@ -578,11 +578,11 @@ margin-left: 50px;
 }
 
 .form-field {
-    margin-left: 93px;
-    align-items: center;
     display: inline-block;
+    align-items: center;
     justify-content: center;
     gap: 12px;
+    margin-left: auto;
    
 }
 
@@ -809,6 +809,7 @@ margin-left: 50px;
     width: 528px;
     height: 581px;
     border-radius: 4px;
+    padding: 40px;
     
     background: var(--secondary-color);
     box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
@@ -823,23 +824,14 @@ margin-left: 50px;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 10px;
 }
 
 .modal-close{
-    position: relative;
-    top: 0;
-    right: 0;
-    width: 30px;
-    height: 30px; 
-
+    position: absolute;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
     top: 8px;
-    bottom: 543px ;
-    left: 490px;
     right: 8px;
 
     background: var(--secondary-color);
