@@ -877,6 +877,9 @@ fill: var(--text-accent)
 }
 
 .modal-form-label { 
+    display: block;
+    margin-bottom: 4px;
+
     font-weight: 400;
     font-size: 12px;
     line-height: 1.17;
@@ -886,7 +889,12 @@ fill: var(--text-accent)
 }
 
 .modal-form-wrapper {
+    position: relative;
     margin-bottom: 10px;
+}
+
+.modal-form-wrap {
+    margin-bottom: 20px; 
 }
 
 .modal-form-field {
@@ -910,11 +918,7 @@ fill: var(--text-accent)
 } 
 
 .modal-form-icon {
-    /* position: absolute;
-    top: 0;
-    left:0;
-    transform: translateY(50%);
-     */
+    position: absolute;
     fill: var(--title-text-color);
 
     transition: fill var(--animation);
